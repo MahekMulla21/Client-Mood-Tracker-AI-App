@@ -1,0 +1,192 @@
+/* Mood Entry Page */
+.mood-entry-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #faf7f2 0%, #f8f3ec 50%, #f5efe8 100%);
+  background-attachment: fixed;
+}
+
+.mood-entry-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.btn-back {
+  display: block;
+  margin-bottom: 2rem;
+  color: var(--warning-color);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.btn-back:hover {
+  color: var(--dark-color);
+  text-decoration: none;
+}
+
+.mood-entry-page h1 {
+  color: var(--dark-color);
+  font-size: 2.25rem;
+  margin-bottom: 0.75rem;
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.subtitle {
+  text-align: center;
+  color: var(--text-secondary);
+  margin-bottom: 2.5rem;
+  font-size: 0.95rem;
+}
+
+.mood-form {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 0.875rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  border: 1px solid var(--border-color);
+}
+
+.form-section {
+  margin-bottom: 2.75rem;
+}
+
+.form-section:last-of-type {
+  margin-bottom: 2rem;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  color: var(--dark-color);
+  font-size: 1.1rem;
+  letter-spacing: 0.3px;
+}
+
+/* Mood Grid */
+.mood-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  gap: 1.25rem;
+}
+
+.mood-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.5rem 1rem;
+  background: white;
+  border: 1.5px solid var(--border-color);
+  border-radius: 0.75rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  box-shadow: var(--shadow-sm);
+}
+
+.mood-option:hover {
+  border-color: var(--primary-dark);
+  background-color: #fffef5;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(254, 252, 232, 0.3);
+}
+
+.mood-option.selected {
+  background: linear-gradient(135deg, #fffef5 0%, #fffbdb 100%);
+  border-color: var(--primary-dark);
+  box-shadow: 0 4px 12px rgba(254, 243, 199, 0.35);
+  font-weight: 700;
+  color: var(--dark-color);
+}
+
+.mood-emoji {
+  font-size: 2.5rem;
+}
+
+.mood-name {
+  font-size: 0.9rem;
+  color: var(--dark-color);
+  font-weight: 600;
+}
+
+/* Textarea */
+.form-section textarea {
+  width: 100%;
+  padding: 1.1rem;
+  border: 1.5px solid var(--border-color);
+  border-radius: 0.625rem;
+  font-size: 1rem;
+  font-family: inherit;
+  resize: vertical;
+  transition: all 0.3s ease;
+  line-height: 1.6;
+  color: var(--text-color);
+}
+
+.form-section textarea:focus {
+  outline: none;
+  border-color: var(--warning-color);
+  box-shadow: 0 0 0 3px rgba(213, 130, 30, 0.1);
+  background-color: #fffef5;
+}
+
+.char-count {
+  text-align: right;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  margin-top: 0.75rem;
+}
+
+/* Form Actions */
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.form-actions .btn-cancel {
+  flex: 1;
+}
+
+.form-actions .btn-submit {
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  .mood-entry-container {
+    padding: 1rem;
+  }
+
+  .mood-entry-page h1 {
+    font-size: 1.5rem;
+  }
+
+  .mood-form {
+    padding: 1.5rem 1rem;
+  }
+
+  .mood-grid {
+    grid-template-columns: repeat(auto-fit, minmax(95px, 1fr));
+    gap: 0.75rem;
+  }
+
+  .mood-option {
+    padding: 1rem 0.75rem;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .form-actions .btn-cancel,
+  .form-actions .btn-submit {
+    flex: 1;
+  }
+}

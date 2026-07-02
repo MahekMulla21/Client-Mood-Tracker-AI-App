@@ -1,0 +1,111 @@
+/* Authentication Pages */
+.auth-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #faf7f2 0%, #f8f3ec 50%, #f5efe8 100%);
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.auth-container {
+  width: 100%;
+  max-width: 450px;
+  display: flex;
+  justify-content: center;
+}
+
+.auth-box {
+  background: white;
+  border-radius: 0.875rem;
+  padding: 2.75rem 2.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  border: 1px solid var(--border-color);
+}
+
+.auth-box h1 {
+  color: var(--dark-color);
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.auth-subtitle {
+  text-align: center;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  font-size: 0.95rem;
+}
+
+.auth-form {
+  margin-bottom: 2rem;
+}
+
+.auth-form .form-group {
+  margin-bottom: 1.75rem;
+}
+
+.auth-form label {
+  display: block;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+  color: var(--dark-color);
+  font-size: 0.95rem;
+  letter-spacing: 0.3px;
+}
+
+.auth-form input {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border: 1.5px solid var(--border-color);
+  border-radius: 0.625rem;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.auth-form input:focus {
+  outline: none;
+  border-color: var(--warning-color);
+  box-shadow: 0 0 0 3px rgba(213, 130, 30, 0.1);
+  background-color: #fffef5;
+}
+
+.auth-form .btn-submit {
+  margin-top: 1rem;
+}
+
+.auth-footer {
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.auth-footer a {
+  color: var(--warning-color);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.auth-footer a:hover {
+  color: var(--dark-color);
+  text-decoration: none;
+}
+
+@media (max-width: 480px) {
+  .auth-box {
+    padding: 1.5rem 1rem;
+  }
+
+  .auth-box h1 {
+    font-size: 1.5rem;
+  }
+
+  .auth-form input {
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+}
